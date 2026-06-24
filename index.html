@@ -200,20 +200,20 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            gap: 40px;
-            width: 95%;
-            max-width: 1500px;
+            gap: 20px;
+            width: 98%;
+            max-width: 1800px;
             height: auto;
             position: absolute;
-            bottom: 70px;
+            bottom: 50px;
             z-index: 2;
         }
 
         /* SIDE CARDS */
         .side-card {
             flex: 1;
-            max-width: 320px;
-            height: 480px;
+            max-width: 250px;
+            height: 400px;
             background: rgba(18, 12, 28, 0.45);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -277,6 +277,21 @@
 
         .side-card:hover .side-card-img {
             transform: scale(1.06);
+        }
+
+        /* Edition Cards Custom Sizing */
+        #edition1Card, #edition2Card {
+            height: 520px;
+        }
+
+        #edition1Card .side-card-img, #edition2Card .side-card-img {
+            object-fit: contain;
+        }
+
+        #edition1Card .side-card-img-container, #edition2Card .side-card-img-container {
+            background: transparent;
+            border: none;
+            box-shadow: none;
         }
 
         .side-card-footer {
@@ -913,13 +928,22 @@
     <!-- Main Container Layout -->
     <div class="main-layout">
 
+        <!-- Edition 1 Card -->
+        <div id="edition1Card" class="side-card">
+            <div class="side-card-label">Standard Edition</div>
+            <div class="side-card-img-container">
+                <img class="side-card-img" src="EDITION.png" alt="GTA 6 Standard Edition">
+            </div>
+            <div class="side-card-footer">Pre-Order Now</div>
+        </div>
+
         <!-- Left Poster Card -->
         <div id="leftCard" class="side-card">
-            <div class="side-card-label">Official Art</div>
+            <div class="side-card-label">Up Next</div>
             <div class="side-card-img-container">
-                <img class="side-card-img" src="poster_full.0az_iud2g3y4j.jpg" alt="GTA 6 Official Poster">
+                <img class="side-card-img" src="" alt="GTA 6 Slide">
             </div>
-            <div class="side-card-footer">Grand Theft Auto VI</div>
+            <div class="side-card-footer">Next In Queue</div>
         </div>
 
         <!-- Central Timer Panel -->
@@ -936,11 +960,20 @@
 
         <!-- Right Video Thumbnail Card -->
         <div id="rightCard" class="side-card">
-            <div class="side-card-label">Trailer Feed</div>
+            <div class="side-card-label">Coming Soon</div>
             <div class="side-card-img-container">
-                <img class="side-card-img" src="gta 6 2.jpg" alt="GTA VI Keyart Image">
+                <img class="side-card-img" src="" alt="GTA 6 Slide">
             </div>
-            <div class="side-card-footer">Vice City Awaits</div>
+            <div class="side-card-footer">Later In Queue</div>
+        </div>
+
+        <!-- Edition 2 Card -->
+        <div id="edition2Card" class="side-card">
+            <div class="side-card-label">Ultimate Edition</div>
+            <div class="side-card-img-container">
+                <img class="side-card-img" src="EDITION 2.png" alt="GTA VI Ultimate Edition">
+            </div>
+            <div class="side-card-footer">Pre-Order Now</div>
         </div>
 
     </div>
